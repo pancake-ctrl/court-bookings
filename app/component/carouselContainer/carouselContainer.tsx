@@ -7,48 +7,63 @@ import Image from 'next/image'
 
 export default function CarouselContainer()
 {
+    const cover = './cover.png'
     var items = [
         {
             
-            background: 'bg-gradient-to-r from-indigo-500 ...'
+            background: '/futsal.jpg'
         },
         {
             
-            background:'bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% ...'
+            background: '/football-carousel.jpg'
+        },
+        {
+            
+            background: '/basketball-carousel.jpg'
+        },
+        {
+            
+            background:'/tennis-carousel.jpg'
         }
     ]
 
     return (
-        <div className='h-36 md:h-screen'>
+        <div className=' '>
 
             <Carousel>
                 {
-                    items.map( (item, i) => <Item key={i} item={item} /> )
+                    items.map( (item, i) => <Item key={i} item={item} cover={cover} /> )
                 }
             </Carousel>
+
         </div>
     )
 }
 
 function Item(props: any)
 {
-    return (
-        <Paper>
-            <div className='flex '>
-                <div className='basis-1/3'>
-                    <Button className="">
-                        Check it out!
-                    </Button>
-
-                </div>
-                <div className='basis-2/3' style={{backgroundImage:`url("/futsal.jpg")`, backgroundRepeat: 'no-repeat', backgroundSize:'cover'}}>
-
-                </div>
-
-            </div>
-        </Paper>
+    return (<>
+                <Paper>
+                    <div className='xl:h-[600px] h-96 w-screen' style={{backgroundImage:`url("${props.cover}") ,url("${props.item.background}")`, backgroundRepeat: 'no-repeat', backgroundSize:'cover'}}>
+                    </div>
+                    <button className=' absolute p-3 rounded-md left-5 bottom-4 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300'>
+                        <div className='text-white'>
+                        Book your court!
+                        </div>
+                    </button>
+                </Paper>
+                <LocationFinder />
+                
+            </>
     )
 }
 
 
 
+function LocationFinder() {
+  return (
+    <div className='text-black w-[100px] h-[100px] bg-blue-50 '>
+bhsavd
+    </div>
+  )
+}

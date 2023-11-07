@@ -19,6 +19,9 @@ const config: Config = {
         '50': '50vh',
        
       },
+      screens:{
+        'xsm': '350px',
+      }
       
     },
   },
