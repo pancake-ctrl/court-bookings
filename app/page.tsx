@@ -1,5 +1,9 @@
-import Image from 'next/image'
-import CarouselContainer from './component/carouselContainer/carouselContainer'
+import dynamic from 'next/dynamic'
+
+const DynamicCarouselContainer = dynamic(()=> import('./component/carouselContainer/carouselContainer'), {
+  ssr: false,
+  
+})
 
 export default function Home() {
   return (
@@ -14,8 +18,7 @@ export default function Home() {
 function Container() {
   return (
     <div className= ' h-auto container'>
-      <CarouselContainer/ >
-      
+      <DynamicCarouselContainer/ >
     </div>
   )
 }
