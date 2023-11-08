@@ -13,7 +13,7 @@ export default function Home() {
 
 function Container() {
   return (
-    <div className= 'mx-auto h-auto container'>
+    <div className= ' h-auto container'>
       <CarouselContainer/ >
       
     </div>
