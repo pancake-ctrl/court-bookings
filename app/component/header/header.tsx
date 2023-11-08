@@ -39,8 +39,10 @@ export default function Header() {
 
                     <div className= 'rounded-xl p-2 hover:bg-green-400 duration-200 transition'>
                         <button type='button'>
+                            <a href='/login'>
 
                         Login
+                            </a>
                         </button>
                     </div>
 
