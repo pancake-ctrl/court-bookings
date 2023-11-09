@@ -1,7 +1,9 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Carousel from "react-material-ui-carousel";
 import { Paper, Button } from "@mui/material";
+
+const notSmall = window.innerWidth >= 640;
 
 export default function CarouselContainer() {
   const cover = "./cover.png";
@@ -22,43 +24,31 @@ export default function CarouselContainer() {
 
   return (
     <div className="w-screen ">
-      <Carousel>
-        {items.map((item, i) => (
-          <Item key={i} item={item} cover={cover} />
-        ))}
-      </Carousel>
+      <>
+        {notSmall ? "" : <LocationFinder />}
+        <Carousel>
+          {items.map((item, i) => (
+            <Item key={i} item={item} cover={cover} />
+          ))}
+        </Carousel>
+      </>
     </div>
   );
 }
 
 function Item(props: any) {
-  const notSmall = window.innerWidth >= 768;
   return (
     <Paper>
-      {notSmall ? (
-        <div
-          className="relative xl:h-[600px] h-96 w-screen"
-          style={{
-            backgroundImage: `url("${props.cover}") ,url("${props.item.background}")`,
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
-        >
-          <LocationFinder />
-        </div>
-      ) : (
-        <>
-          <div
-            className="relative xl:h-[600px] h-96 w-screen"
-            style={{
-              backgroundImage: `url("${props.cover}") ,url("${props.item.background}")`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
-          ></div>
-          <LocationFinder />
-        </>
-      )}
+      <div
+        className="relative xl:h-[600px] h-96 w-screen"
+        style={{
+          backgroundImage: `url("${props.cover}") ,url("${props.item.background}")`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
+        {notSmall ? <LocationFinder /> : ""}
+      </div>
     </Paper>
   );
 }
@@ -71,8 +61,9 @@ function LocationFinder() {
     { id: 4, sport: "Tennis" },
   ];
 
+  const [dropDown, setDropDown] = useState(false);
   return (
-    <div className=" text-black w-screen h-[50%] md:w-[400px] md:h-[300px] bg-gray-100 absolute left-0 right-0 bottom-0 m-auto md:left-[10%] md:top-[10%] 2xl:top-[30%] md:right-auto md:bottom-auto shadow-2xl mx-auto ">
+    <div className="z-10 text-black w-screen h-[50%] sm:w-[400px] sm:h-[300px] bg-gray-100 sm:absolute static left-0 right-0 bottom-0 m-auto sm:left-[10%] sm:top-[10%] 2xl:top-[30%] sm:right-auto sm:bottom-auto shadow-2xl mx-auto ">
       <div className="p-7 flex flex-col gap-y-1.5">
         <h1 className="font-mono">FIND YOUR PLAY</h1>
         <p>Find futsal pitches near you</p>
@@ -82,6 +73,7 @@ function LocationFinder() {
           data-dropdown-toggle="dropdown"
           className="   text-black bg-grey-400 border shadow-lg hover:bg-grey-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium text-sm px-5 py-2.5 text-center flex-row flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           type="button"
+          onClick={}
         >
           <div className="grow ">SELECT A SPORT </div>
           <svg

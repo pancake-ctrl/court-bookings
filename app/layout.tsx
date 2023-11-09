@@ -3,6 +3,7 @@ import { Roboto } from 'next/font/google'
 import './globals.css'
 import BottomNav from './component/bottomNav/bottomNav'
 import Header from './component/header/header'
+import Footer from './component/footer/footer'
 
 
 import { initializeApp } from "firebase/app";
@@ -68,14 +69,20 @@ export default function RootLayout({
           <Header />
         </div>
         
-        <div className='md:hidden'>
+        <div className='sm:hidden'>
           <BottomNav />
         </div>
+
 
         <div className='text-white'>
           {children}
         </div>
 
+        
+        <div className='absolute bottom-0'>
+          <Footer />
+        </div>
+        
       </body>
     </html>
   )
