@@ -4,7 +4,7 @@ import './globals.css'
 import BottomNav from './component/bottomNav/bottomNav'
 import Header from './component/header/header'
 import Footer from './component/footer/footer'
-import { AuthContextProvider } from './context/AuthContext'
+
 
 
 
