@@ -12,7 +12,17 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+          'futsal-img': "url('/futsal.jpg')",
+
       },
+      spacing: {
+        '50': '50vh',
+       
+      },
+      screens:{
+        'xsm': '350px',
+      }
+      
     },
   },
   plugins: [],
