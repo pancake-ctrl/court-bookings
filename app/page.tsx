@@ -10,6 +10,7 @@ export default function Home() {
     
     <div className="">
       <Container />
+      <h1 className='text-black'>heya</h1>
     </div>
   )
 }
@@ -17,8 +18,9 @@ export default function Home() {
 
 function Container() {
   return (
-    <div className= ' h-auto container'>
+    <div className= ' h-auto w-full'>
       <DynamicCarouselContainer/ >
+      
     </div>
   )
 }

@@ -23,7 +23,7 @@ export default function CarouselContainer() {
   ];
 
   return (
-    <div className="w-screen ">
+    <div className="w-full ">
       <>
         {notSmall ? "" : <LocationFinder />}
         <Carousel>
@@ -40,7 +40,7 @@ function Item(props: any) {
   return (
     <Paper>
       <div
-        className="relative xl:h-[600px] h-96 w-screen"
+        className="relative xl:h-[600px] h-96 w-full"
         style={{
           backgroundImage: `url("${props.cover}") ,url("${props.item.background}")`,
           backgroundRepeat: "no-repeat",
@@ -74,7 +74,7 @@ function LocationFinder() {
         <h1 className="font-mono">FIND YOUR PLAY</h1>
         <p>Find futsal pitches near you</p>
 
-        <div className="relative flex flex-col">
+        <div className="relative flex flex-col ">
           {/* DROPDOWN BUTTON */}
           <button
             id="dropdownDefaultButton"
@@ -105,8 +105,8 @@ function LocationFinder() {
           <div
             ref={dropDownRef}
             className={`${
-              isActive ? " opacity-100 visible translate-y-0" : "hidden"
-            } absolute z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700`}
+              isActive ? " opacity-100 visible translate-y-[45px]" : "hidden"
+            } w-[100%] absolute  bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700`}
           >
             <ul
               className="py-2 text-sm text-gray-700 dark:text-gray-200"

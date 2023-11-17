@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 export default function Header() {
@@ -12,9 +13,9 @@ export default function Header() {
 
             <div className=' xsm:basis-1/2 pl-3 md:pl-10'>
                 <div >
-                    <a href='#'>
+                    <Link href='/'>
                         <Image className='' src='logo.svg' alt='logo' width={30} height={30}/>
-                    </a>
+                    </Link>
                 </div>
             </div>
 
@@ -34,15 +35,18 @@ export default function Header() {
 
                 <div className='flex flex-row items-center gap-3 '>
                     <button type='button' className='rounded-xl p-2 hover:bg-green-400 duration-200 transition'>
-                        Sign up
+                        <Link href='/signup'>
+                            Sign up
+                        </Link>
                     </button>
 
                     <div className= 'rounded-xl p-2 hover:bg-green-400 duration-200 transition'>
                         <button type='button'>
-                            <a href='/login'>
+                            <Link href='/signin'>
+                                
 
-                        Login
-                            </a>
+                        Sign in
+                            </Link>
                         </button>
                     </div>
 
