@@ -4,7 +4,7 @@ import './globals.css'
 import BottomNav from './component/bottomNav/bottomNav'
 import Header from './component/header/header'
 import Footer from './component/footer/footer'
-
+import { AuthContextProvider } from './context/AuthContext'
 
 
 
@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-      
+      <AuthContextProvider>
 
             <div>
               <Header />
@@ -47,7 +47,7 @@ export default function RootLayout({
             <div className=' bottom-0'>
               <Footer />
             </div>
-       
+       </AuthContextProvider>
       </body>
     </html>
   )
