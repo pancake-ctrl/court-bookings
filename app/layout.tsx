@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-      <AuthContextProvider>
+      
 
             <div>
               <Header />
@@ -47,7 +47,7 @@ export default function RootLayout({
             <div className=' bottom-0'>
               <Footer />
             </div>
-       </AuthContextProvider>
+       
       </body>
     </html>
   )
