@@ -1,0 +1,51 @@
+const venueData: object = [
+  {
+    id: 1,
+    image: "",
+    category: ["Badminton", "Futsal"],
+    name: "PJ Challenger",
+    address: "",
+  },
+  {
+    id: 2,
+    image: "",
+    category: ["Football"],
+    name: "Joga Bonito",
+    address: "W. P, 6, Lengkok Bellamy, off, Jalan Bellamy, Bukit Petaling, 50460 Kuala Lumpur",
+  },
+  {
+    id: 3,
+    image: "",
+    category: [ "Futsal"],
+    name: "LGM Futsal Court",
+    address: "Kampung Baru, 50450 Kuala Lumpur, Federal Territory of Kuala Lumpur",
+  },
+  {
+    id: 4,
+    image: "",
+    category: ["Futsal"],
+    name: "Score Arena Futsal Centre",
+    address: " Lot 1439, Jalan 1/127A,, Off Jalan Kuchai Lama,, 58200 Kuala Lumpur., 58200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+  },
+  {
+    id: 5,
+    image: "",
+    category: ["Futsal"],
+    name: "PJ Challenger",
+    address: "",
+  },
+  {
+    id: 6,
+    image: "",
+    category: ["Futsal"],
+    name: "NS7 Futsal Sentul",
+    address: "Lorong Sentul Sehaluan, Sentul, 51100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+  },
+  {
+    id: 1,
+    image: "",
+    category: ["Badminton", "futsal"],
+    name: "Ace Sports World @ Rooftop Lotus's Kepong",
+    address: "Level 3, Kepong Village Mall, Jalan 7A/62A, Bandar Menjalara, 52200 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur",
+  },
+];
