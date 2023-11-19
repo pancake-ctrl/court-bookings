@@ -5,10 +5,10 @@ import Link from 'next/link'
 
 export default function Header() {
 
-    const buttonStyle = 'p-3 rounded-md  transition ease-in-out delay-150 bg-green-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-30'
+    const buttonStyle = 'p-3 rounded-md  transition ease-in-out delay-150 bg-green-400 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-30'
    
   return (
-    <div className=' text-white min-h-[5rem] bg-green-500 items-center flex  flex-row boder-none '>
+    <div className=' text-white min-h-[5rem] bg-green-400 rounded-lg shadow m-2 items-center hidden sm:flex flex-row boder-white '>
         
 
             <div className=' xsm:basis-1/2 pl-3 md:pl-10'>
@@ -34,7 +34,7 @@ export default function Header() {
                 </div>
 
                 <div className='flex flex-row items-center gap-3 '>
-                    <button type='button' className='rounded-xl p-2 hover:bg-green-400 duration-200 transition'>
+                    <button type='button' className='rounded-xl p-2 hover:bg-green-500 duration-200 transition'>
                         <Link href='/signup'>
                             Sign up
                         </Link>

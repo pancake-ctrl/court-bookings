@@ -1,13 +1,21 @@
-import React from "react";
+import React from 'react'
 import Image from "next/image";
+import venueData from '../mockdata/venue-data';
+
 
 export default function page() {
+
+
   return (
-    <div className="w-[90%] mx-auto my-12">
-      <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <a href="#">
-          <Image className="rounded-t-lg" src="" alt="image" />
-        </a>
+    <div className="w-[90%] mx-auto my-12 flex flex-wrap">
+    {venueData.map((venue)=>{
+      return(
+
+
+      <div key={venue.id} className="max-w-sm max-h-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className='relative h-[40%] overflow-hidden'>
+          <Image className="rounded-t-lg  object-cover" src={venue.image} fill={true}  alt="image" />
+        </div>
         <div className="p-5">
           <a href="#">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -41,6 +49,8 @@ export default function page() {
           </a>
         </div>
       </div>
+      )
+    })}
     </div>
   );
 }

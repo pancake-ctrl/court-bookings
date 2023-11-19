@@ -44,7 +44,7 @@ export default function RootLayout({
             </div>
 
             
-            <div className=' bottom-0'>
+            <div className='relative'>
               <Footer />
             </div>
        
