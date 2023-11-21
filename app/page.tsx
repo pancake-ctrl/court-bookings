@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic'
-import Venue from './component/venue/page'
+import Venue from './component/venue/venue'
 
 const DynamicCarouselContainer = dynamic(()=> import('./component/carouselContainer/carouselContainer'), {
   ssr: false,
@@ -18,7 +18,7 @@ export default function Home() {
 
 function Container() {
   return (
-    <div className= ' h-auto w-full'>
+    <div className= ' h-auto w-full p-2'>
       <DynamicCarouselContainer/ >
       <Venue />
       

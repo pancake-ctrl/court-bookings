@@ -3,7 +3,6 @@ import { Roboto } from 'next/font/google'
 import './globals.css'
 import BottomNav from './component/bottomNav/bottomNav'
 import Header from './component/header/header'
-import Footer from './component/footer/footer'
 
 
 
@@ -21,13 +20,13 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
+      <body className={roboto.className} >
       
 
             <div>
@@ -39,15 +38,11 @@ export default function RootLayout({
             </div>
 
 
-            <div className=''>
+            <div className='h-full'>
               {children}
             </div>
 
             
-            <div className='relative'>
-              <Footer />
-            </div>
-       
       </body>
     </html>
   )
