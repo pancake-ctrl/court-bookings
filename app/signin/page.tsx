@@ -1,3 +1,4 @@
+import Link from 'next/link';
 
 export default function Login() {
   return (
@@ -16,10 +17,10 @@ export default function Login() {
                 <button className="bg-slate-500 hover:bg-slate-700 text-white text-base rounded-lg py-2.5 px-5 transition-colors w-full text-[19px]">Log In</button>
             </form>
             <p className="text-center mt-3 text-[14px]">Don&#x27;t have an account? 
-                <a href="/signup" className="text-gray-600">Create one</a>
+                <Link href="/signup" className="text-gray-600">Create one</Link>
             </p>
             <p className="text-center mt-3 text-[14px]">By clicking continue, you agree to our 
-                <a href="/terms" className="text-gray-600">Terms of Service</a> and <a href="/privacy" className="text-gray-600">Privacy Policy</a>.
+                <Link href="/terms" className="text-gray-600">Terms of Service</Link> and <Link href="/privacy" className="text-gray-600">Privacy Policy</Link>.
             </p>
         </div>
     </div>

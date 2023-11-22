@@ -1,7 +1,7 @@
 const venueData: { id: number, image: string[], category: string[], name: string, address: string   }[] = [
     {
       id: 1,
-      image: ["/pj-challenger.jpg", 'pj-challenger-2.jpg'],
+      image: ["/pj-challenger.jpg", "/pj-challenger-2.jpg", "/pj-challenger-3.jpg", "/pj-challenger-4.jpg", "/pj-challenger-5.jpg", "/pj-challenger-6.jpg"],
       category: ["Badminton", "Futsal"],
       name: "PJ Challenger",
       address: "118, Jalan Professor Khoo Kay Kim, Seksyen 19, 46300 Petaling Jaya, Selangor",

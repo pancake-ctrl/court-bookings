@@ -1,6 +1,7 @@
 import React from "react";
 import BookingForm from "@/app/component/bookingForm/bookingForm";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function page({
   searchParams,
@@ -13,22 +14,25 @@ export default function page({
     address: string;
   };
 }) {
-  console.log(searchParams.id);
+  const images = searchParams.image;
+  console.log(images);
 
   return (
-    <div className="container flex flex-col sm:text-xl max-h-full max-w-full mx-auto justify-center ">
-      <div className="container mx-auto p-2 lg:px-32 pb-12">
-        <div className="-m-1 flex flex-wrap md:-m-2">
-          <div className="flex w-1/2 flex-wrap max-h-64">
-            <div className="w-1/2 p-1 md:p-2">
-              <Image
-                src="/pj-challenger.jpg"
-                width={100}
-                height={100}
-                alt="img"
-              />
-            </div>
-          </div>
+    <div className="container flex flex-col gap-8 sm:text-xl max-h-full max-w-full mx-auto m-5 justify-center ">
+      <div className="container w-full mx-auto h-fit my-12">
+        <div className="flex flex-wrap justify-center gap-4">
+          {images?.map((image) => {
+            return (
+              <div key={image} className=" relative w-64 h-44 overflow-hidden" >
+                <Image
+                  className="h-auto rounded-lg  object-cover"
+                  src={image}
+                  fill={true} 
+                  alt=""
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
 
@@ -75,12 +79,12 @@ export default function page({
                 </p>
                 <p className="text-gray-500 dark:text-gray-400">
                   Check out this guide to learn how to{" "}
-                  <a
+                  <Link
                     href="/docs/getting-started/introduction/"
                     className="text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     get started
-                  </a>{" "}
+                  </Link>{" "}
                   and start developing websites even faster with components on
                   top of Tailwind CSS.
                 </p>
@@ -126,12 +130,12 @@ export default function page({
                 </p>
                 <p className="text-gray-500 dark:text-gray-400">
                   Check out the{" "}
-                  <a
+                  <Link
                     href="https://flowbite.com/figma/"
                     className="text-blue-600 dark:text-blue-500 hover:underline"
                   >
                     Figma design system
-                  </a>{" "}
+                  </Link>{" "}
                   based on the utility classNamees from Tailwind CSS and
                   components from Flowbite.
                 </p>
@@ -187,21 +191,21 @@ export default function page({
                 </p>
                 <ul className="ps-5 text-gray-500 list-disc dark:text-gray-400">
                   <li>
-                    <a
+                    <Link
                       href="https://flowbite.com/pro/"
                       className="text-blue-600 dark:text-blue-500 hover:underline"
                     >
                       Flowbite Pro
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       href="https://tailwindui.com/"
                       rel="nofollow"
                       className="text-blue-600 dark:text-blue-500 hover:underline"
                     >
                       Tailwind UI
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -213,7 +217,6 @@ export default function page({
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.925840786126!2d101.62901827461445!3d3.1143224533665026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4be1db1b66f1%3A0xe8cf8ad2fdd7f1d7!2sThe%20Challenger%20Sports%20Centre%20PJ!5e0!3m2!1sen!2smy!4v1700566585168!5m2!1sen!2smy"
               width="600"
               height="450"
-              allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
             ></iframe>

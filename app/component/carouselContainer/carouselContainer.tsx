@@ -2,6 +2,7 @@
 import React, { useState, useRef } from "react";
 import Carousel from "react-material-ui-carousel";
 import { Paper, Button } from "@mui/material";
+import Link from 'next/link';
 
 const notSmall = window.innerWidth >= 640;
 
@@ -114,12 +115,12 @@ function LocationFinder() {
             >
               {sports.map((sport) => (
                 <li key={sport.id}>
-                  <a
+                  <Link
                     href="#"
                     className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                   >
                     {sport.sport}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
