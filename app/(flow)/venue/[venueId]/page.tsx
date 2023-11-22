@@ -218,7 +218,6 @@ export default function page({
               width="600"
               height="450"
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
         </div>
