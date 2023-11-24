@@ -35,11 +35,8 @@ const DropDown: React.FC<DropDownProps> = ({
             return (
               <p
                 key={index}
-                onClick={(): void => {
-                  onClickHandler(sport.sport);
-                }}
               >
-                {sport.sport}
+                {sport}
               </p>
             );
           }
