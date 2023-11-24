@@ -8,7 +8,7 @@ const venueData: { id: number, image: string[], category: string[], name: string
     },
     {
       id: 2,
-      image: ["/joga-bonito.jpg"],
+      image: ["/joga-bonito.jpg", "/joga-bonito-2.jpg", "/joga-bonito-3.jpg", "/joga-bonito-4.jpg"],
       category: ["Football"],
       name: "Joga Bonito",
       address: "W. P, 6, Lengkok Bellamy, off, Jalan Bellamy, Bukit Petaling, 50460 Kuala Lumpur",
